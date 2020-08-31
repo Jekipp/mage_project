@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Mage: Wizard Poker</h1>   
+
+{% for game in games %}
+<ul>
+    <li>{{game.id}}</li>
+</ul>
+
+{% endfor %}
+<button name='new_game' type="submit" value='play' class="btn btn-success">Play</button>
+
+
+{% endblock content %}

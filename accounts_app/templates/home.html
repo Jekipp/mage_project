@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Home</h1>
+<h3>{{user.username}} is logged in</h3>
+
+<h5>all users:</h5>
+
+    {% for user in users%}
+<ul>
+    <li>{{user.username}}</li>
+
+</ul>
+   
+{% endfor %}
+
+<div class="list-group">
+<a href='{% url "pending_games" %}' class='btn btn-success'>Pending Games</a>
+<a href='{% url "start_game" %}' class='btn btn-success'>New Game</a>
+<a href='{% url "active_games" %}' class='btn btn-success'>See Active Games</a>
+
+</div>
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+    <div>
+    {% for card in cards %}
+    <p>Suit: {{ card.suit }}, Rank: {{ card.rank }}</p>
+    {% endfor %}
+   </div>
+
+
+
+{% endblock content %}

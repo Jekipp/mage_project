@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Wait Room</h1>
+{{game.id}}
+
+{% for player in game.players.all %}
+<ul>
+    <li> {{player.user.username}}
+    </li>
+</ul>
+
+{% endfor %}
+
+
+<p>Player: {{user.username}}</p> 
+
+{% comment %}
+
+{{game.id}}
+{{user.username}}
+
+
+
+
+<p>Game ID: {{game.id}}</p>        
+<p>Waiting: </p>       
+{% for player in user.username.all %}
+    <ul>
+        <li>{{user.username}}</li>
+    </ul>
+       
+{% endfor %}
+{% endcomment %}
+
+    
+
+
+{% endblock content %}

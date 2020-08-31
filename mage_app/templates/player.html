@@ -1,0 +1,14 @@
+{% extends 'mage_app/base.html' %}
+{% block content %}
+    <h1>Mage: Player</h1>   
+
+{% for player in player %}
+<ul>
+    <li>{{player.id}}</li>
+</ul>
+
+{% endfor %}
+<button name='new_player' type="submit" value='True' class="btn btn-success">Play</button>
+
+
+{% endblock content %}

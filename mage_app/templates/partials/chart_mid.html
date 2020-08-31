@@ -1,0 +1,36 @@
+{% extends "game.html" %}
+{% block content %}
+
+
+
+
+<div class="container" style="border-color:  black; border-style: double;">
+
+	<div class="row">
+		<div class="col-1" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3>Mine</h3>
+		</div>
+
+		<div class="col-1" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3>{{mine_total}}</h3>
+		</div>
+
+		<div class="col-1" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3>Library</h3>
+		</div>
+
+		<div class="col-5" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3 class="">{{game.library.count}}</h3>
+		</div>
+		<div class="col-1" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3>Discard</h3>
+		</div>
+		<div class="col-3" style="border-color:  blue; border-style: double; padding: 2px">
+			<h3>{% for card in game.discard.all %}  <a href='{% url "card_details" game.id card.id %}' class='btn btn-success'>{{card.value}}{{ card.get_suit_display}} </a>{%endfor%}</h3>
+		</div>
+    </div>
+</div>
+
+
+{% endblock content %}
+

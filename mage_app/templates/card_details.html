@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'style.css'%}"> 
+{% endblock %}
+{% block content %}
+
+<div class="container" style="border-color:  rgb(0, 0, 0); border: 8px double black; ; background-color: gray; text-align: center; color: rgb(0, 0, 0); text-shadow: 2px 2px 5px rgb(255, 255, 255); padding: 5px;">
+	<h1>Card Details</h1>
+</div>
+
+<div class="container" style="border-color:  rgb(0, 0, 0); border: 8px double black; ; background-color: gray; text-align: center; color: white; text-shadow: 2px 2px 5px rgb(0, 0, 0); padding: 5px;">
+
+        {{card.value}} : {{ card.get_suit_display}}
+
+    <h3><a href='{% url "play_card" game.id card.id %}' class='btn btn-success'>Play Card</a></h3>
+
+        
+</div>
+      
+<div class="container" style="border-color:  rgb(0, 0, 0); border: 8px double black; ; background-color: gray; text-align: center; color: rgb(0, 0, 0); text-shadow: 2px 2px 5px rgb(255, 255, 255); padding: 5px;">
+    <a href='{% url "game" game.id %}' class='btn btn-success'>Back to Game</a>
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
+
+<h3>    <a href='{% url "card_ability" game.id card.id %}' name='ability_type' value='ability1' class='btn btn-success'>Ability 1</a></h3>
+<h3>    <a href='{% url "card_ability2" game.id card.id %}' name='ability_type' value='ability2' class='btn btn-success'>Ability 2</a></h3>
+
+{% endcomment %}
+
+
+
+
+
+

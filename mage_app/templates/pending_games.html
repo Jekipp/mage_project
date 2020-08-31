@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Pending Games</h1>
+
+   <h3>{{user.username}} is logged in</h3>
+
+
+    <div class="list-group">
+        {% for game in pending %}
+
+        <a href="#" class="list-group-item list-group-item-action">
+            
+            For Game:  {{game.id}}, {% for player in game.players.all %}{{player.user.username}}{% endfor %} is waiting to play
+
+            <a href='{% url "join_game" game.id %}' class='btn btn-success'>Join Game</a>
+
+
+    
+        {% endfor %}
+
+
+{% endblock content %}
